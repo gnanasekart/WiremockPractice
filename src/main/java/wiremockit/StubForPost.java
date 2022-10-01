@@ -4,17 +4,13 @@ import static com.github.tomakehurst.wiremock.client.WireMock.*;
 
 import org.testng.annotations.Test;
 
-import com.github.tomakehurst.wiremock.core.Options;
-import com.github.tomakehurst.wiremock.junit.WireMockRule;
-
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
 public class StubForPost {
 	
 	public void setStatus() {
-		//WireMockRule wm = new WireMockRule(Options.DEFAULT_PORT);
-		
+				
 		stubFor(
 				post(urlEqualTo("/api/table/issuesxml"))
 				.willReturn(aResponse()
